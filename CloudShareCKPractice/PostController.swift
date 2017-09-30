@@ -6,11 +6,22 @@
 //  Copyright © 2017 Sohail. All rights reserved.
 //
 
-import Foundation
-
+import UIKit
 
 class PostController {
     
+    let sharedController = PostController()
+    let posts: [Post]? = []
     
+    
+    func createPostWith(image: UIImage, with caption: String) {
+        
+    }
+    
+    
+    
+    private func addComment(_ text: String, to post: Post) {
+        _ = Comment(text: text, post: post)
+    }
     
 }
