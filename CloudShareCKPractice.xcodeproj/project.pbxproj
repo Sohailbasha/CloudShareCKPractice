@@ -11,6 +11,8 @@
 		FD5CBEFA1F7F1978001EDFE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5CBEF81F7F1978001EDFE1 /* Main.storyboard */; };
 		FD5CBEFC1F7F1978001EDFE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5CBEFB1F7F1978001EDFE1 /* Assets.xcassets */; };
 		FD5CBEFF1F7F1978001EDFE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5CBEFD1F7F1978001EDFE1 /* LaunchScreen.storyboard */; };
+		FD5CBF0B1F7F1B67001EDFE1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5CBF0A1F7F1B67001EDFE1 /* CloudKit.framework */; };
+		FD5CBF0D1F7F1D38001EDFE1 /* AddPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,9 @@
 		FD5CBEFE1F7F1978001EDFE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD5CBF001F7F1979001EDFE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD5CBF071F7F1A46001EDFE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/MainViewController.swift; sourceTree = "<group>"; };
+		FD5CBF081F7F1B64001EDFE1 /* CloudShareCKPractice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudShareCKPractice.entitlements; sourceTree = "<group>"; };
+		FD5CBF0A1F7F1B67001EDFE1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5CBF0B1F7F1B67001EDFE1 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +45,7 @@
 			children = (
 				FD5CBEF31F7F1978001EDFE1 /* CloudShareCKPractice */,
 				FD5CBEF21F7F1978001EDFE1 /* Products */,
+				FD5CBF091F7F1B67001EDFE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +60,24 @@
 		FD5CBEF31F7F1978001EDFE1 /* CloudShareCKPractice */ = {
 			isa = PBXGroup;
 			children = (
+				FD5CBF081F7F1B64001EDFE1 /* CloudShareCKPractice.entitlements */,
 				FD5CBEF41F7F1978001EDFE1 /* AppDelegate.swift */,
 				FD5CBF061F7F1A46001EDFE1 /* MainViewController.swift */,
+				FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */,
 				FD5CBEFB1F7F1978001EDFE1 /* Assets.xcassets */,
 				FD5CBEF81F7F1978001EDFE1 /* Main.storyboard */,
 				FD5CBEFD1F7F1978001EDFE1 /* LaunchScreen.storyboard */,
 				FD5CBF001F7F1979001EDFE1 /* Info.plist */,
 			);
 			path = CloudShareCKPractice;
+			sourceTree = "<group>";
+		};
+		FD5CBF091F7F1B67001EDFE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD5CBF0A1F7F1B67001EDFE1 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +113,14 @@
 					FD5CBEF01F7F1978001EDFE1 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5CBF0D1F7F1D38001EDFE1 /* AddPostTableViewController.swift in Sources */,
 				FD5CBEF51F7F1978001EDFE1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CloudShareCKPractice/CloudShareCKPractice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XFHGVA942A;
 				INFOPLIST_FILE = CloudShareCKPractice/Info.plist;
@@ -295,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CloudShareCKPractice/CloudShareCKPractice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XFHGVA942A;
 				INFOPLIST_FILE = CloudShareCKPractice/Info.plist;
