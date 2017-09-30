@@ -16,7 +16,7 @@ class Post {
     let timeStamp: Date
     var comments: [Comment]
     
-    init(photoData: Data?, let timeStamp: Date = Date(), var comments: [Comment] = []) {
+    init(photoData: Data?, timeStamp: Date = Date(), comments: [Comment] = []) {
         self.photoData = photoData
         self.timeStamp = timeStamp
         self.comments = comments
