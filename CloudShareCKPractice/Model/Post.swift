@@ -23,5 +23,9 @@ class Post {
     }
     
     
+    var photo: UIImage? {
+        guard let data = self.photoData else { return nil }
+        return UIImage(data: data)
+    }
     
 }
