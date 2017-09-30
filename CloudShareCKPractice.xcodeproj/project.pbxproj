@@ -13,6 +13,7 @@
 		FD5CBEFF1F7F1978001EDFE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5CBEFD1F7F1978001EDFE1 /* LaunchScreen.storyboard */; };
 		FD5CBF0B1F7F1B67001EDFE1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5CBF0A1F7F1B67001EDFE1 /* CloudKit.framework */; };
 		FD5CBF0D1F7F1D38001EDFE1 /* AddPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */; };
+		FD5CBF101F7F1DBF001EDFE1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF0F1F7F1DBF001EDFE1 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FD5CBF081F7F1B64001EDFE1 /* CloudShareCKPractice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudShareCKPractice.entitlements; sourceTree = "<group>"; };
 		FD5CBF0A1F7F1B67001EDFE1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostTableViewController.swift; sourceTree = "<group>"; };
+		FD5CBF0F1F7F1DBF001EDFE1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,8 @@
 			children = (
 				FD5CBF081F7F1B64001EDFE1 /* CloudShareCKPractice.entitlements */,
 				FD5CBEF41F7F1978001EDFE1 /* AppDelegate.swift */,
-				FD5CBF061F7F1A46001EDFE1 /* MainViewController.swift */,
-				FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */,
+				FD5CBF0F1F7F1DBF001EDFE1 /* Post.swift */,
+				FD5CBF0E1F7F1DA6001EDFE1 /* View Controllers */,
 				FD5CBEFB1F7F1978001EDFE1 /* Assets.xcassets */,
 				FD5CBEF81F7F1978001EDFE1 /* Main.storyboard */,
 				FD5CBEFD1F7F1978001EDFE1 /* LaunchScreen.storyboard */,
@@ -78,6 +80,15 @@
 				FD5CBF0A1F7F1B67001EDFE1 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD5CBF0E1F7F1DA6001EDFE1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD5CBF061F7F1A46001EDFE1 /* MainViewController.swift */,
+				FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5CBF101F7F1DBF001EDFE1 /* Post.swift in Sources */,
 				FD5CBF0D1F7F1D38001EDFE1 /* AddPostTableViewController.swift in Sources */,
 				FD5CBEF51F7F1978001EDFE1 /* AppDelegate.swift in Sources */,
 			);
