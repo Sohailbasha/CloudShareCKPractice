@@ -15,13 +15,15 @@ class PostController {
     
     
     func createPostWith(image: UIImage, with caption: String) {
-        
+        let post = Post(photoData: UIImagePNGRepresentation(image))
+        addComment(caption, to: post)
     }
     
     
     
     private func addComment(_ text: String, to post: Post) {
-        _ = Comment(text: text, post: post)
+        let comment = Comment(text: text, post: post)
+        post.comments.append(comment)
     }
     
 }
