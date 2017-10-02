@@ -17,6 +17,7 @@
 		FD5CBF121F7F1E70001EDFE1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF111F7F1E70001EDFE1 /* Comment.swift */; };
 		FD5CBF1C1F82AAD0001EDFE1 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF1B1F82AAD0001EDFE1 /* PostTableViewCell.swift */; };
 		FD5CBF1F1F82AC51001EDFE1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF1E1F82AC51001EDFE1 /* PostViewController.swift */; };
+		FD5CBF211F82ADEF001EDFE1 /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF201F82ADEF001EDFE1 /* PostDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FD5CBF1A1F82AA47001EDFE1 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		FD5CBF1B1F82AAD0001EDFE1 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		FD5CBF1E1F82AC51001EDFE1 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		FD5CBF201F82ADEF001EDFE1 /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +95,9 @@
 		FD5CBF0E1F7F1DA6001EDFE1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */,
 				FD5CBF1E1F82AC51001EDFE1 /* PostViewController.swift */,
+				FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */,
+				FD5CBF201F82ADEF001EDFE1 /* PostDetailTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				FD5CBF1C1F82AAD0001EDFE1 /* PostTableViewCell.swift in Sources */,
 				FD5CBEF51F7F1978001EDFE1 /* AppDelegate.swift in Sources */,
 				FD5CBF121F7F1E70001EDFE1 /* Comment.swift in Sources */,
+				FD5CBF211F82ADEF001EDFE1 /* PostDetailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
