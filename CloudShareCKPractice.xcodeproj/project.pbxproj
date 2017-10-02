@@ -18,6 +18,7 @@
 		FD5CBF1C1F82AAD0001EDFE1 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF1B1F82AAD0001EDFE1 /* PostTableViewCell.swift */; };
 		FD5CBF1F1F82AC51001EDFE1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF1E1F82AC51001EDFE1 /* PostViewController.swift */; };
 		FD5CBF211F82ADEF001EDFE1 /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF201F82ADEF001EDFE1 /* PostDetailTableViewController.swift */; };
+		FD5CBF231F82B244001EDFE1 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF221F82B244001EDFE1 /* PostController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +33,10 @@
 		FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostTableViewController.swift; sourceTree = "<group>"; };
 		FD5CBF0F1F7F1DBF001EDFE1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		FD5CBF111F7F1E70001EDFE1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		FD5CBF1A1F82AA47001EDFE1 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		FD5CBF1B1F82AAD0001EDFE1 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		FD5CBF1E1F82AC51001EDFE1 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		FD5CBF201F82ADEF001EDFE1 /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
+		FD5CBF221F82B244001EDFE1 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +115,7 @@
 		FD5CBF181F82A9FE001EDFE1 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FD5CBF1A1F82AA47001EDFE1 /* PostController.swift */,
+				FD5CBF221F82B244001EDFE1 /* PostController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -208,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD5CBF1F1F82AC51001EDFE1 /* PostViewController.swift in Sources */,
+				FD5CBF231F82B244001EDFE1 /* PostController.swift in Sources */,
 				FD5CBF101F7F1DBF001EDFE1 /* Post.swift in Sources */,
 				FD5CBF0D1F7F1D38001EDFE1 /* AddPostTableViewController.swift in Sources */,
 				FD5CBF1C1F82AAD0001EDFE1 /* PostTableViewCell.swift in Sources */,

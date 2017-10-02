@@ -32,7 +32,7 @@ class PostViewController: UIViewController {
         if segue.identifier == "showPostDetail" {
             if let destinationVC = segue.destination as? PostDetailTableViewController {
                 if let indexPath = tableView.indexPathForSelectedRow {
-                    let post = PostController.sharedController.posts[indexPath.row]
+                    guard let post = PostController.sharedController.posts?[indexPath.row] else { return }
                     destinationVC.post = post
                 }
             }
