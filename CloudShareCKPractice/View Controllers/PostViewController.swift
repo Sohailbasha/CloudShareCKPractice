@@ -1,16 +1,17 @@
 //
-//  MainViewController.swift
+//  PostViewController.swift
 //  CloudShareCKPractice
 //
-//  Created by Ilias Basha on 9/29/17.
+//  Created by Ilias Basha on 10/2/17.
 //  Copyright © 2017 Sohail. All rights reserved.
 //
 
 import UIKit
-import Foundation
 
-class MainViewController: UIViewController {
+class PostViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +33,5 @@ class MainViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 }
-
-

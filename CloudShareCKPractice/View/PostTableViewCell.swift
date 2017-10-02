@@ -10,6 +10,12 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    var post: Post? {
+        didSet {
+            
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

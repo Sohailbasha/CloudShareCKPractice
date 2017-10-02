@@ -16,6 +16,7 @@
 		FD5CBF101F7F1DBF001EDFE1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF0F1F7F1DBF001EDFE1 /* Post.swift */; };
 		FD5CBF121F7F1E70001EDFE1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF111F7F1E70001EDFE1 /* Comment.swift */; };
 		FD5CBF1C1F82AAD0001EDFE1 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF1B1F82AAD0001EDFE1 /* PostTableViewCell.swift */; };
+		FD5CBF1F1F82AC51001EDFE1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF1E1F82AC51001EDFE1 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,6 @@
 		FD5CBEFB1F7F1978001EDFE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD5CBEFE1F7F1978001EDFE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD5CBF001F7F1979001EDFE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD5CBF071F7F1A46001EDFE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/MainViewController.swift; sourceTree = "<group>"; };
 		FD5CBF081F7F1B64001EDFE1 /* CloudShareCKPractice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudShareCKPractice.entitlements; sourceTree = "<group>"; };
 		FD5CBF0A1F7F1B67001EDFE1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostTableViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +33,7 @@
 		FD5CBF111F7F1E70001EDFE1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		FD5CBF1A1F82AA47001EDFE1 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		FD5CBF1B1F82AAD0001EDFE1 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		FD5CBF1E1F82AC51001EDFE1 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +93,8 @@
 		FD5CBF0E1F7F1DA6001EDFE1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FD5CBF061F7F1A46001EDFE1 /* MainViewController.swift */,
 				FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */,
+				FD5CBF1E1F82AC51001EDFE1 /* PostViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -203,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5CBF1F1F82AC51001EDFE1 /* PostViewController.swift in Sources */,
 				FD5CBF101F7F1DBF001EDFE1 /* Post.swift in Sources */,
 				FD5CBF0D1F7F1D38001EDFE1 /* AddPostTableViewController.swift in Sources */,
 				FD5CBF1C1F82AAD0001EDFE1 /* PostTableViewCell.swift in Sources */,
@@ -228,14 +230,6 @@
 				FD5CBEFE1F7F1978001EDFE1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		FD5CBF061F7F1A46001EDFE1 /* MainViewController.swift */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD5CBF071F7F1A46001EDFE1 /* Base */,
-			);
-			name = MainViewController.swift;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
