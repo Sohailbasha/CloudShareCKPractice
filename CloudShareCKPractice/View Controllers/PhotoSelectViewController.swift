@@ -38,7 +38,7 @@ class PhotoSelectViewController: UIViewController {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (_) in
                 imagePicker.sourceType = .camera
-                self.present(alert, animated: true, completion: nil)
+                self.present(imagePicker, animated: true, completion: nil)
             }))
         }
         

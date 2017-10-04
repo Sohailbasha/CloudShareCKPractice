@@ -2,15 +2,16 @@
 //  PostController.swift
 //  CloudShareCKPractice
 //
-//  Created by Ilias Basha on 9/29/17.
+//  Created by Ilias Basha on 10/2/17.
 //  Copyright © 2017 Sohail. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class PostController {
     
-    let sharedController = PostController()
+    static let sharedController = PostController()
     let posts: [Post]? = []
     
     
@@ -20,7 +21,7 @@ class PostController {
     }
     
     
-    private func addComment(_ text: String, to post: Post) {
+    func addComment(_ text: String, to post: Post) {
         let comment = Comment(text: text, post: post)
         post.comments.append(comment)
     }
