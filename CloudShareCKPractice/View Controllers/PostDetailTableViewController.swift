@@ -11,6 +11,11 @@ import UIKit
 class PostDetailTableViewController: UITableViewController {
 
     var post: Post?
+    
+    var comments: [Comment]? {
+        return post?.comments
+    }
+    
     @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -55,14 +60,14 @@ class PostDetailTableViewController: UITableViewController {
     @IBAction func commentTapped(_ sender: Any) {
         
         let alert = UIAlertController(title: "Add Comment", message: "", preferredStyle: .alert)
-        var textFieldText: UITextField?
+        let textFieldText = UITextField()
         
         alert.addTextField { (textField) in
             textField.keyboardType = .default
-            textFieldText?.text = textField.text
+            textFieldText.text = textField.text
         }
         let add = UIAlertAction(title: "Add", style: .default) { (_) in
-            if let text = textFieldText?.text, !text.isEmpty {
+            if let text = textFieldText.text, !text.isEmpty {
                 if let post = self.post {
                     PostController.sharedController.addComment(text, to: post)
                 }

@@ -49,3 +49,7 @@ class AddPostTableViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
 }
+
+extension AddPostTableViewController: UIImagePickerControllerDelegate {
+    
+}

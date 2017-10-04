@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD2B99211F856E7E002F780A /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B99201F856E7E002F780A /* PhotoSelectViewController.swift */; };
 		FD5CBEF51F7F1978001EDFE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBEF41F7F1978001EDFE1 /* AppDelegate.swift */; };
 		FD5CBEFA1F7F1978001EDFE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5CBEF81F7F1978001EDFE1 /* Main.storyboard */; };
 		FD5CBEFC1F7F1978001EDFE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5CBEFB1F7F1978001EDFE1 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD2B99201F856E7E002F780A /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
 		FD5CBEF11F7F1978001EDFE1 /* CloudShareCKPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudShareCKPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5CBEF41F7F1978001EDFE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD5CBEF91F7F1978001EDFE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				FD5CBF1E1F82AC51001EDFE1 /* PostViewController.swift */,
 				FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */,
+				FD2B99201F856E7E002F780A /* PhotoSelectViewController.swift */,
 				FD5CBF201F82ADEF001EDFE1 /* PostDetailTableViewController.swift */,
 			);
 			path = "View Controllers";
@@ -213,6 +216,7 @@
 				FD5CBF101F7F1DBF001EDFE1 /* Post.swift in Sources */,
 				FD5CBF0D1F7F1D38001EDFE1 /* AddPostTableViewController.swift in Sources */,
 				FD5CBF1C1F82AAD0001EDFE1 /* PostTableViewCell.swift in Sources */,
+				FD2B99211F856E7E002F780A /* PhotoSelectViewController.swift in Sources */,
 				FD5CBEF51F7F1978001EDFE1 /* AppDelegate.swift in Sources */,
 				FD5CBF121F7F1E70001EDFE1 /* Comment.swift in Sources */,
 				FD5CBF211F82ADEF001EDFE1 /* PostDetailTableViewController.swift in Sources */,
