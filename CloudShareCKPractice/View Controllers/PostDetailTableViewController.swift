@@ -61,8 +61,17 @@ class PostDetailTableViewController: UITableViewController {
             textField.keyboardType = .default
             textFieldText?.text = textField.text
         }
+        let add = UIAlertAction(title: "Add", style: .default) { (_) in
+            if let text = textFieldText?.text, !text.isEmpty {
+                if let post = self.post {
+                    PostController.sharedController.addComment(text, to: post)
+                }
+            }
+        }
         
-        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(add)
+        alert.addAction(cancel)
     }
     
     @IBAction func shareTapped(_ sender: Any) {
