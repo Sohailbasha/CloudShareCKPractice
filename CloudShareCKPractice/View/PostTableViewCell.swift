@@ -12,9 +12,14 @@ class PostTableViewCell: UITableViewCell {
 
     var post: Post? {
         didSet {
-            
+            if let post = self.post {
+                self.postImage.image = post.photo
+            }
         }
     }
+    
+    @IBOutlet var postImage: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

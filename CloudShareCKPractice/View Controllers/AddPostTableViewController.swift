@@ -11,6 +11,7 @@ import UIKit
 class AddPostTableViewController: UITableViewController {
 
     var image: UIImage?
+    
 
     @IBOutlet var textField: UITextField!
 
@@ -22,6 +23,7 @@ class AddPostTableViewController: UITableViewController {
         if let image = image,
             let text = textField.text, !text.isEmpty {
             PostController.sharedController.createPostWith(image: image, with: text)
+            self.dismiss(animated: true, completion: nil)
         } else {
             showAlert()
         }
@@ -33,6 +35,14 @@ class AddPostTableViewController: UITableViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "embeddedPhotoSelect" {
+            if let embedded = segue.destination as? PhotoSelectViewController {
+                embedded.delegate = self
+            }
+        }
+    }
+    
     private func showAlert() {
         let alert = UIAlertController(title: "Empty Values", message: "Fill in empty feilds to post.", preferredStyle: .alert)
         let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
@@ -41,4 +51,9 @@ class AddPostTableViewController: UITableViewController {
     }
 }
 
+extension AddPostTableViewController: PhotoselectViewcontrollerDelegate {
+    func photoSelectViewControllerSelected(image: UIImage) {
+        self.image = image
+    }
+}
 

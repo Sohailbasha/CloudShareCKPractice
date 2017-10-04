@@ -50,9 +50,11 @@ class PhotoSelectViewController: UIViewController {
 extension PhotoSelectViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            delegate?.photoSelectViewControllerSelected(image: image)
-            button.setTitle("", for: .normal)
-            imageView.image = image
+            picker.dismiss(animated: true, completion: {
+                self.delegate?.photoSelectViewControllerSelected(image: image)
+                self.button.setTitle("", for: .normal)
+                self.imageView.image = image
+            })
         }
     }
 }

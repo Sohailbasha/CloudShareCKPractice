@@ -17,11 +17,13 @@ class PostViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
 
@@ -44,12 +46,13 @@ class PostViewController: UIViewController {
 
 extension PostViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return PostController.sharedController.posts?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as? PostTableViewCell
-        
+        guard let post = PostController.sharedController.posts?[indexPath.row] else { return UITableViewCell() }
+        cell?.post = post
         return cell ?? UITableViewCell()
     }
 }

@@ -10,7 +10,11 @@ import UIKit
 
 class PostDetailTableViewController: UITableViewController {
 
-    var post: Post?
+    var post: Post? {
+        didSet {
+            updateViews()
+        }
+    }
     
     var comments: [Comment]? {
         return post?.comments
@@ -20,15 +24,15 @@ class PostDetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 40
-        self.tableView.estimatedRowHeight = 800
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 40
     }
 
 
-    func updateViews() {
-        guard let post = self.post else { return }
+    private func updateViews() {
+        guard let post = post, isViewLoaded else { return }
         imageView.image = post.photo
-        
+        tableView.reloadData()
     }
     
     

@@ -12,12 +12,13 @@ import UIKit
 class PostController {
     
     static let sharedController = PostController()
-    let posts: [Post]? = []
+    var posts: [Post]? = []
     
     
     func createPostWith(image: UIImage, with caption: String) {
         let post = Post(photoData: UIImagePNGRepresentation(image))
         addComment(caption, to: post)
+        posts?.append(post)
     }
     
     
