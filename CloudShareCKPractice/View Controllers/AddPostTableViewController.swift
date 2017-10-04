@@ -10,23 +10,16 @@ import UIKit
 
 class AddPostTableViewController: UITableViewController {
 
+    var image: UIImage?
+
+    @IBOutlet var textField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
-    
-    @IBOutlet var textField: UITextField!
-    @IBOutlet var selectPhotoButton: UIButton!
-    @IBOutlet var imageView: UIImageView!
-    
-    @IBAction func selectPhotoButtonTapped(_ sender: Any) {
-        selectPhotoButton.setTitle("", for: .normal)
-    }
-    
     
     @IBAction func addPostButtonTapped(_ sender: Any) {
-        if let image = imageView.image,
+        if let image = image,
             let text = textField.text, !text.isEmpty {
             PostController.sharedController.createPostWith(image: image, with: text)
         } else {
@@ -36,9 +29,7 @@ class AddPostTableViewController: UITableViewController {
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         self.dismiss(animated: true) {
-            self.imageView.image = nil
             self.textField.text = ""
-            self.selectPhotoButton.setTitle("Select Photo", for: .normal)
         }
     }
     
@@ -50,6 +41,4 @@ class AddPostTableViewController: UITableViewController {
     }
 }
 
-extension AddPostTableViewController: UIImagePickerControllerDelegate {
-    
-}
+

@@ -311,10 +311,10 @@
             </objects>
             <point key="canvasLocation" x="1610" y="-59"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo Select View Controller-->
         <scene sceneID="gVY-q5-jUG">
             <objects>
-                <viewController id="0ic-5C-OcK" sceneMemberID="viewController">
+                <viewController id="0ic-5C-OcK" customClass="PhotoSelectViewController" customModule="CloudShareCKPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nh1-dx-zIO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,6 +325,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBg-kJ-ejM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
                                 <state key="normal" title="Select Photo"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="0ic-5C-OcK" eventType="touchUpInside" id="NQH-WG-r3t"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -339,6 +342,10 @@
                             <constraint firstItem="6zd-nV-2Pb" firstAttribute="top" secondItem="nh1-dx-zIO" secondAttribute="top" id="lz4-V6-NFK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="DBg-kJ-ejM" id="GhR-RY-zlJ"/>
+                        <outlet property="imageView" destination="6zd-nV-2Pb" id="QxE-WO-HPt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="el8-x8-HIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
