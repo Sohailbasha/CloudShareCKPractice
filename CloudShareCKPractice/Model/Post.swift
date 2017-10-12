@@ -31,6 +31,7 @@ class Post {
 
 extension Post: Searchable {
     // makes use of the matches(searchTerm: String) function in Comment
+    
     func matches(searchTerm: String) -> Bool {
         let matchingComments = comments.filter{ $0.matches(searchTerm: searchTerm)}
         return !matchingComments.isEmpty
