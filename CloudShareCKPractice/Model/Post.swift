@@ -27,5 +27,11 @@ class Post {
         guard let data = self.photoData else { return nil }
         return UIImage(data: data)
     }
-    
+}
+
+extension Post: Searchable {
+    func matches(searchTerm: String) -> Bool {
+        let matchingComments = comments.filter{ $0.matches(searchTerm: searchTerm)}
+        return !matchingComments.isEmpty
+    }
 }

@@ -23,6 +23,6 @@ class Comment {
 
 extension Comment: Searchable {
     func matches(searchTerm: String) -> Bool {
-        
+        return text.contains(searchTerm)
     }
 }
