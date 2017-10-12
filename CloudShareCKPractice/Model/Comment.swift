@@ -20,3 +20,9 @@ class Comment {
         self.post = post
     }
 }
+
+extension Comment: Searchable {
+    func matches(searchTerm: String) -> Bool {
+        
+    }
+}
