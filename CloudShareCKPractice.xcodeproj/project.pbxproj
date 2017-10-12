@@ -20,6 +20,7 @@
 		FD5CBF1F1F82AC51001EDFE1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF1E1F82AC51001EDFE1 /* PostViewController.swift */; };
 		FD5CBF211F82ADEF001EDFE1 /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF201F82ADEF001EDFE1 /* PostDetailTableViewController.swift */; };
 		FD5CBF231F82B244001EDFE1 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF221F82B244001EDFE1 /* PostController.swift */; };
+		FD88696A1F900B9F00D8C9CF /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8869691F900B9F00D8C9CF /* SearchResultsTableViewController.swift */; };
 		FDE7D8681F8FBE510000B027 /* Searchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7D8671F8FBE510000B027 /* Searchable.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		FD5CBF1E1F82AC51001EDFE1 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		FD5CBF201F82ADEF001EDFE1 /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
 		FD5CBF221F82B244001EDFE1 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		FD8869691F900B9F00D8C9CF /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		FDE7D8671F8FBE510000B027 /* Searchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searchable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				FD5CBF0C1F7F1D38001EDFE1 /* AddPostTableViewController.swift */,
 				FD2B99201F856E7E002F780A /* PhotoSelectViewController.swift */,
 				FD5CBF201F82ADEF001EDFE1 /* PostDetailTableViewController.swift */,
+				FD8869691F900B9F00D8C9CF /* SearchResultsTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -169,7 +172,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
 								enabled = 1;
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD5CBF1F1F82AC51001EDFE1 /* PostViewController.swift in Sources */,
+				FD88696A1F900B9F00D8C9CF /* SearchResultsTableViewController.swift in Sources */,
 				FD5CBF231F82B244001EDFE1 /* PostController.swift in Sources */,
 				FD5CBF101F7F1DBF001EDFE1 /* Post.swift in Sources */,
 				FD5CBF0D1F7F1D38001EDFE1 /* AddPostTableViewController.swift in Sources */,

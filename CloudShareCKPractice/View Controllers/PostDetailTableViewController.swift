@@ -30,8 +30,8 @@ class PostDetailTableViewController: UITableViewController {
 
 
     private func updateViews() {
-        guard let post = post, isViewLoaded else { return }
-        imageView.image = post.photo
+        guard let post = post, isViewLoaded, let photo = post.photo else { return }
+        imageView.image = photo
         tableView.reloadData()
     }
     
