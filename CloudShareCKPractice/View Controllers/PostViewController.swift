@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class PostViewController: UIViewController {
 
@@ -14,6 +15,8 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupNavBar()
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -24,6 +27,12 @@ class PostViewController: UIViewController {
         tableView.reloadData()
     }
     
+    func setupNavBar() {
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
 
     
     // MARK: - Navigation

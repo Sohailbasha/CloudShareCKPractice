@@ -368,6 +368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XFHGVA942A;
 				INFOPLIST_FILE = CloudShareCKPractice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sohail.CloudShareCKPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -384,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XFHGVA942A;
 				INFOPLIST_FILE = CloudShareCKPractice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sohail.CloudShareCKPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
