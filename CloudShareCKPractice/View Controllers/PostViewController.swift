@@ -28,7 +28,10 @@ class PostViewController: UIViewController {
     }
     
     func setupNavBar() {
-        let searchController = UISearchController(searchResultsController: nil)
+        let resultsController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchResultsTableViewController")
+        let searchController = UISearchController(searchResultsController: resultsController)
+        searchController.searchResultsUpdater = self
+        
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -48,6 +51,19 @@ class PostViewController: UIViewController {
         }
     }
 
+}
+
+extension PostViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let resultsVC = searchController.searchResultsController as? SearchResultsTableViewController, let searchTerm = searchController.searchBar.text?.lowercased() {
+            let posts = PostController.sharedController.posts
+            let filteredPosts = posts?.filter({$0.matches(searchTerm: searchTerm)})
+            resultsVC.resultsArray = filteredPosts
+            resultsVC.tableView.reloadData()
+        }
+    }
+    
+    
 }
 
 extension PostViewController: UITableViewDataSource, UITableViewDelegate {
