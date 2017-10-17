@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IaA-qc-9WN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IaA-qc-9WN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -185,24 +185,40 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ji1-sr-CTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760.79999999999995" y="954.87256371814101"/>
+            <point key="canvasLocation" x="761" y="927"/>
         </scene>
         <!--Search Results Table View Controller-->
         <scene sceneID="2OE-1p-1Ih">
             <objects>
-                <tableViewController id="zox-eQ-1Fe" customClass="SearchResultsTableViewController" customModule="CloudShareCKPractice" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SearchResultsTableViewController" id="zox-eQ-1Fe" customClass="SearchResultsTableViewController" customModule="CloudShareCKPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hxz-HE-kWh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResult" rowHeight="387" id="AuD-mm-gyc">
-                                <rect key="frame" x="0.0" y="28" width="375" height="387"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResult" rowHeight="346" id="AuD-mm-gyc">
+                                <rect key="frame" x="0.0" y="28" width="375" height="346"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AuD-mm-gyc" id="0sd-v5-NUb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="386.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="345.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="20V-IE-TX1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="320" id="J3e-zG-gTR"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="20V-IE-TX1" secondAttribute="trailing" id="21z-p7-iS3"/>
+                                        <constraint firstItem="20V-IE-TX1" firstAttribute="top" secondItem="0sd-v5-NUb" secondAttribute="top" id="5AJ-F6-xBc"/>
+                                        <constraint firstItem="20V-IE-TX1" firstAttribute="leading" secondItem="0sd-v5-NUb" secondAttribute="leading" id="XKe-QZ-Ab9"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="vb5-j1-uJ1" kind="show" identifier="toPostDetailFromSearch" id="yWv-LK-axe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -213,7 +229,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeX-AG-q6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1608.8" y="765.96701649175418"/>
+            <point key="canvasLocation" x="-89" y="927"/>
         </scene>
         <!--Add Post Table View Controller-->
         <scene sceneID="eT5-0G-sha">
@@ -260,7 +276,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJ0-fD-Q5X">
-                                                    <rect key="frame" x="8" y="8" width="359" height="45"/>
+                                                    <rect key="frame" x="16" y="11" width="343" height="39"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -286,7 +302,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDA-CT-5Sa">
-                                                    <rect key="frame" x="8" y="8" width="359" height="28"/>
+                                                    <rect key="frame" x="16" y="11" width="343" height="22"/>
                                                     <state key="normal" title="Add Post"/>
                                                     <connections>
                                                         <action selector="addPostButtonTapped:" destination="bom-t5-Mpc" eventType="touchUpInside" id="c1J-nw-ydd"/>
@@ -405,4 +421,7 @@
             <point key="canvasLocation" x="3225" y="5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yWv-LK-axe"/>
+    </inferredMetricsTieBreakers>
 </document>

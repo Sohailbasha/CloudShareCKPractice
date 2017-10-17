@@ -12,6 +12,7 @@ import Foundation
 class PostViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    var searchController: UISearchController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +30,13 @@ class PostViewController: UIViewController {
     
     func setupNavBar() {
         let resultsController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchResultsTableViewController")
-        let searchController = UISearchController(searchResultsController: resultsController)
-        searchController.searchResultsUpdater = self
+        searchController = UISearchController(searchResultsController: resultsController)
+        searchController?.searchResultsUpdater = self
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationController?.navigationBar.prefersLargeTitles = true
+        definesPresentationContext = true
     }
 
     
@@ -49,15 +51,31 @@ class PostViewController: UIViewController {
                 }
             }
         }
+        
+        if segue.identifier == "toPostDetailFromSearch" {
+            if let destinationVC = segue.destination as? PostDetailTableViewController {
+                if let sender = sender as? PostTableViewCell {
+                    if let indexPath = (searchController?.searchResultsController as? SearchResultsTableViewController)?.tableView.indexPath(for: sender) {
+                        if let searchTerm = searchController?.searchBar.text?.lowercased() {
+                            let posts = PostController.sharedController.posts?.filter({$0.matches(searchTerm: searchTerm)})
+                            let post = posts?[indexPath.row]
+                            destinationVC.post = post
+                        }
+                    }
+                }
+            }
+        }
     }
 
 }
 
 extension PostViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        if let resultsVC = searchController.searchResultsController as? SearchResultsTableViewController, let searchTerm = searchController.searchBar.text?.lowercased() {
+        if let resultsVC = searchController.searchResultsController as? SearchResultsTableViewController,
+            let searchTerm = searchController.searchBar.text?.lowercased() {
+            
             let posts = PostController.sharedController.posts
-            let filteredPosts = posts?.filter({$0.matches(searchTerm: searchTerm)})
+            let filteredPosts = posts?.filter { $0.matches(searchTerm: searchTerm) }.map { $0 as Searchable }
             resultsVC.resultsArray = filteredPosts
             resultsVC.tableView.reloadData()
         }
