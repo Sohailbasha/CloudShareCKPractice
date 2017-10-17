@@ -22,6 +22,7 @@
 		FD5CBF231F82B244001EDFE1 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBF221F82B244001EDFE1 /* PostController.swift */; };
 		FD88696A1F900B9F00D8C9CF /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8869691F900B9F00D8C9CF /* SearchResultsTableViewController.swift */; };
 		FDE7D8681F8FBE510000B027 /* Searchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7D8671F8FBE510000B027 /* Searchable.swift */; };
+		FDF875141F95875700DE0837 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF875131F95875700DE0837 /* CloudKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		FD5CBF221F82B244001EDFE1 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		FD8869691F900B9F00D8C9CF /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		FDE7D8671F8FBE510000B027 /* Searchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searchable.swift; sourceTree = "<group>"; };
+		FDF875131F95875700DE0837 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				FD5CBF081F7F1B64001EDFE1 /* CloudShareCKPractice.entitlements */,
 				FD5CBEF41F7F1978001EDFE1 /* AppDelegate.swift */,
+				FDF875131F95875700DE0837 /* CloudKitManager.swift */,
 				FD5CBF1D1F82AADB001EDFE1 /* View */,
 				FD5CBF181F82A9FE001EDFE1 /* Model Controller */,
 				FD5CBF131F7F1F1C001EDFE1 /* Model */,
@@ -219,6 +222,7 @@
 			files = (
 				FD5CBF1F1F82AC51001EDFE1 /* PostViewController.swift in Sources */,
 				FD88696A1F900B9F00D8C9CF /* SearchResultsTableViewController.swift in Sources */,
+				FDF875141F95875700DE0837 /* CloudKitManager.swift in Sources */,
 				FD5CBF231F82B244001EDFE1 /* PostController.swift in Sources */,
 				FD5CBF101F7F1DBF001EDFE1 /* Post.swift in Sources */,
 				FD5CBF0D1F7F1D38001EDFE1 /* AddPostTableViewController.swift in Sources */,
